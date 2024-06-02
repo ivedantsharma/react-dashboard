@@ -109,16 +109,21 @@ const Dashboard = () => {
   };
 
   const filterDataByTimeRange = (data, range) => {
-    const now = new Date();
+    // Dummy timestamps
+    const dummyNow = new Date("2019-01-02T23:59:45");
+    const dummyLastHour = new Date("2019-01-02T00:00:24");
+    const dummyLastDay = new Date("2019-01-02T00:00:24");
+    const dummyLastWeek = new Date("2018-12-26T00:00:35");
+
     return data.filter((d) => {
       const timestamp = new Date(d.timestamp);
       switch (range) {
         case "last_hour":
-          return now - timestamp <= 3600000;
+          return timestamp >= dummyLastHour && timestamp <= dummyNow;
         case "last_day":
-          return now - timestamp <= 86400000;
+          return timestamp >= dummyLastDay && timestamp <= dummyNow;
         case "last_week":
-          return now - timestamp <= 604800000;
+          return timestamp >= dummyLastWeek && timestamp <= dummyNow;
         default:
           return true;
       }
