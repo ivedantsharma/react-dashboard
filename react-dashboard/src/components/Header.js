@@ -5,6 +5,7 @@ import image from "./download.png";
 const Header = () => (
   <HeaderContainer>
     <Icon />
+    <MenuButton>Dashboard</MenuButton>
     <Nav>
       <NavItem>Home</NavItem>
       <NavItem>About Us</NavItem>
@@ -32,10 +33,26 @@ const Icon = styled.div`
   background-size: cover;
 `;
 
+const MenuButton = styled.button`
+  background: none;
+  border: none;
+  font-size: 1.2rem;
+  cursor: pointer;
+  &:hover {
+    color: #ddd;
+  }
+  color: #fff;
+  @media (min-width: 768px) {
+    display: none;
+  }
+`;
+
 const Nav = styled.div`
   display: flex;
   gap: 2rem;
-  margin-right: 2rem;
+  @media (max-width: 767px) {
+    display: none;
+  }
 `;
 
 const NavItem = styled.h1`

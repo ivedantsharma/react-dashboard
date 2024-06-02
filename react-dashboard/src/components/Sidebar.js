@@ -55,8 +55,11 @@ const SidebarContainer = styled.div`
   color: #fff;
   width: 15rem;
   height: 100%;
-  display: flex;
-  flex-direction: column;
+  display: none;
+  @media (min-width: 768px) {
+    display: flex;
+    flex-direction: column;
+  }
 `;
 
 const Tab = styled.div`

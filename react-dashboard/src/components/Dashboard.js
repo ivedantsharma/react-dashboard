@@ -30,6 +30,11 @@ const DashboardContainer = styled.div`
   background: linear-gradient(135deg, #1e4258, #10101f);
   color: #fff;
   overflow: hidden;
+  @media (max-width: 768px) {
+    display: flex;
+    flex-direction: column;
+    overflow: scroll;
+  }
 `;
 
 const GraphContainer = styled.div`
