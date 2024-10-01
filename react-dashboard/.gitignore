@@ -9,6 +9,10 @@ src/components/data.json
 # testing
 /coverage
 
+# Ignore data.json file
+data.json
+
+
 # production
 /build
 
