@@ -111,8 +111,8 @@ const Dashboard = () => {
   const filterDataByTimeRange = (data, range) => {
     // Dummy timestamps
     const dummyNow = new Date("2019-01-02T23:59:45");
-    const dummyLastHour = new Date("2019-01-02T00:00:24");
-    const dummyLastDay = new Date("2019-01-02T00:00:24");
+    const dummyLastHour = new Date("2019-01-02T00:00:00");
+    const dummyLastDay = new Date("2019-01-01T00:00:00");
     const dummyLastWeek = new Date("2018-12-26T00:00:35");
 
     return data.filter((d) => {
